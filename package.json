@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
-    "db:initialize": "node scripts/initialize-db.js"
+    "db:initialize": "node scripts/initialize-db.js",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "@graphql-tools/schema": "^9.0.4",
@@ -36,5 +37,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "globalSetup": "./test/jest.setup.js"
+  }
 }

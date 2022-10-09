@@ -3,7 +3,7 @@ const { Post } = require('../db/models')
 const router = Router()
 
 module.exports = app => {
-  app.use('/test', router)
+  app.use('/posts', router)
 
   router.get('', async (_req, res) => {
     try {
